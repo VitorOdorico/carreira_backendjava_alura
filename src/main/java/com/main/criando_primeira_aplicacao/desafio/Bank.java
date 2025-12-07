@@ -26,7 +26,8 @@ public class Bank {
                     1 - pedir empréstimo
                     2 - pagar com PIX
                     3 - verificar extrato
-                    4 - sair
+                    4 - verificar saldo atual
+                    5 - sair
                     """);
 
             System.out.print("Escolha uma opção: ");
@@ -69,8 +70,10 @@ public class Bank {
                         }
                     }
                     break;
-
                 case "4":
+                    System.out.println("saldo atual: " + saldo);
+                    break;
+                case "5":
                     System.out.println("Encerrando o sistema...");
                     return;
 
