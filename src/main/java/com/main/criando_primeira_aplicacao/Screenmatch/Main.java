@@ -6,17 +6,24 @@ public class Main {
 
         int ano = 2022;
         String nome = "Maverick";
-        boolean incluidoNoPlano = true;
+        boolean incluidoNoPlano = false;
         double notaDoFilme = 8.1;
         double mediaNotaDoFilme = (8.1 + 6.3 + 8.0)/3;
+        String tipoPlano = "Pluss";
+        double valorLocacao = 12.99;
 
         System.out.println("Filme: Top gun: "+ nome);
         System.out.println(String.format("Media de classificação: %.2f", mediaNotaDoFilme)+"/10");
         System.out.println("Ano de lançamento: "+ ano);
-        if(incluidoNoPlano) {
+        if(incluidoNoPlano || tipoPlano.equals("Plus")) {
             System.out.println(nome+ ": Incluido no plano");
         }else{
-            System.out.println(nome+ ": Não incluido no plano");
+            System.out.println(nome+ ": Não incluido no plano, deve pagar locação");
+            System.out.println("Valor da locação:" + valorLocacao);
+        }
+
+        if(ano >= 2022) {
+            System.out.println("Lançamento");
         }
     }
 }
